@@ -16,6 +16,12 @@
                     </a>
                 </li>
                 <li>
+                    <a class="active" href="/web-admin/alumni">
+                        <i class="fa fa-person"></i>
+                        <span>ALUMNI</span>
+                    </a>
+                </li>
+                <li>
                     <a class="active" href="/web-admin/company">
                         <i class="fa fa-person"></i>
                         <span>COMPANY</span>

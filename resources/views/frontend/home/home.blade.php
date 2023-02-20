@@ -8,6 +8,7 @@
                 </div>
                 <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
                 <input type="checkbox" id="drop"/>
+
             </nav>
             <!-- //nav -->
         </div>

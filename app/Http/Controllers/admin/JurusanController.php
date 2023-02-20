@@ -70,8 +70,8 @@ class JurusanController extends Controller
     }
 
     public function edit(Jurusan $jr)
-
     {
+
     }
 
     public function update(Request $request, Jurusan $jurusan)
