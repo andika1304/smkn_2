@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Storage;
 
 class JurusanController extends Controller
 {
+    public function uploadGambar()
+    {
+        // untuk upload gambar
+    }
     /**
      * index
      *
