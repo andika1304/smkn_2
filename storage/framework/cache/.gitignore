@@ -1,0 +1,5 @@
+*
+!data/
+!.gitignore
+$ chmod 777 -R /blog/storage
+$ chmod 777 -R /blog/bootstrap/cache
