@@ -46,6 +46,7 @@
 						<div class="padding">
 							<!-- banner form -->
 							<form action="/web-admin/kontak/store" method="post">
+                                @csrf
 								<h5 class="mb-3">FORMULIR PENDAFTARAN</h5>
 								<div class="form-style-w3ls">
 									<input placeholder="NAMA SISWA/SISWI" name="name" type="text" required="">

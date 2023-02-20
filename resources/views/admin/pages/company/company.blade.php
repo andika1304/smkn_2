@@ -23,15 +23,15 @@
                                 @forelse ($com as $row)
                                     <tr>
                                         <td class="text-center">
-                                            <img src="{{ 'http://127.0.0.1:8000' . Storage::url('berita/') . $row->foto_b }}"
+                                            <img src="{{ 'http://127.0.0.1:8000' . Storage::url('company/') . $row->foto_b }}"
                                                 class="rounded" style="width: 100px">
                                         </td>
                                         <td>{{ $row->nama_c }}</td>
                                         <td>{!! $row->co_ !!}</td>
                                         <td class="text-center">
                                             <form onsubmit="return confirm('Apakah Anda Yakin ?');"
-                                                action="/web-admin/company/destroy/{{ $row->id }}" method="POST">
-                                                <a href="/web-admin/company/edit/{{ $row->id }}"
+                                                action="/web-admin/company/destroy/{{ $row->id_c }}" method="POST">
+                                                <a href="/web-admin/company/create/{{ $row->id_c }}"
                                                     class="btn btn-sm btn-primary">EDIT</a>
                                                 @csrf
                                                 @method('DELETE')

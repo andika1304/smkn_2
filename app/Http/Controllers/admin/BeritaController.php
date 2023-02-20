@@ -74,7 +74,7 @@ class BeritaController extends Controller
 
     public function edit(Berita $berita)
     {
-        
+     return view('admin.pages.berita.create');
     }
     public function update(Request $request, Berita $berita)
     {
@@ -85,7 +85,7 @@ class BeritaController extends Controller
         ]);
         if ($request->hasFile('foto_b')) {
             $image = $request->file('foto_b');
-            $image->storeAs('public/berita/', $image->hashName());
+            $image->storeAs('public/berita/', $image->hashName(),'public');
 
             Storage::delete(['public/berita/' . $berita->foto_b]);
 

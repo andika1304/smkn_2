@@ -30,8 +30,8 @@
                                         <td>{!! $row->desk_b !!}</td>
                                         <td class="text-center">
                                             <form onsubmit="return confirm('Apakah Anda Yakin ?');"
-                                                action="/web-admin/berita/destroy/{{ $row->id }}" method="POST">
-                                                <a href="/web-admin/berita/edit{{ $row->id }}"
+                                                action="/web-admin/berita/destroy/{{ $row->id }}" method="get">
+                                                <a href="/web-admin/berita/edit/{{ $row->id }}"
                                                     class="btn btn-sm btn-primary">EDIT</a>
                                                 @csrf
                                                 @method('DELETE')

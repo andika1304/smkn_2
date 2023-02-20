@@ -67,14 +67,6 @@
                             ipnut libero malesuada feugiat.
                             Lorem ipsum dolor sit amet, consectetur elit.</p>
                     </div>
-                    <ul class="social_section_1info">
-                        <li class="mb-2 facebook"><a href="#"><span class="fa fa-facebook"></span></a></li>
-                        <li class="mb-2 twitter"><a href="#"><span class="fa fa-twitter"></span></a></li>
-                        <li class="google"><a href="#"><span class="fa fa-google-plus"></span></a></li>
-                        <li class="linkedin"><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                        <li class="pinterest"><a href="#"><span class="fa fa-pinterest"></span></a></li>
-                        <li class="vimeo"><a href="#"><span class="fa fa-vimeo"></span></a></li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -86,10 +78,7 @@
         <div class="container py-4">
             <div class="row bottom">
                 <ul class="col-lg-6 links p-0">
-                    <li><a href="#why" class="">Why Choose Us</a></li>
-                    <li><a href="#services" class="">Services </a></li>
-                    <li><a href="#team" class="">Teachers </a></li>
-                    <li><a href="#testi" class="">Testimonials </a></li>
+
                 </ul>
                 <div class="col-lg-6 copy-right p-0">
                     <p class="">© 2019 Child Learn. All rights reserved | Design by

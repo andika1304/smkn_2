@@ -13,10 +13,6 @@
                 <div class="form-group">
                     <label for="nama_k">JURUSAN</label>
                     <input type="text" name="nama_k" id="nama_k" class="form-control">
-                    <div class="form-gruop">
-                        <label for="foto_k">FOTO</label>
-                        <input type="file" name="foto_k" id="foto_k" class="form-control" accept=".png, .jpg">
-                    </div>
                     <div class="form-group">
                         <label for="desk_b">DESKRIPSI</label>
                         <input type="text" name="desk_k" id="desk_k" class="form-control">

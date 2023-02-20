@@ -479,12 +479,12 @@ h4.b-w3ltxt {
 /*-- banner bottom --*/
 /* girds */
 .three-grids-w3pvt-1 {
-    background: url(../images/logo2.jpg) no-repeat center;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -ms-background-size: cover;
+    background: url(../images/40.jpg) no-repeat center;
+    background-size: auto;
+    -webkit-background-size: auto;
+    -moz-background-size: auto;
+    -o-background-size: auto;
+    -ms-background-size: auto;
     min-height: 300px;
 	position: relative;
     z-index: 1;

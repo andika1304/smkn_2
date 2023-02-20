@@ -10,6 +10,9 @@ class kontak extends Model
     use HasFactory;
 
     protected $table = 'kontak';
+
+    public $timestamps = false;
+
     protected $fillable = [
         'sekolah',
         'no',

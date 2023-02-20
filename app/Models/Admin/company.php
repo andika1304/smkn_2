@@ -10,6 +10,9 @@ class company extends Model
     use HasFactory;
 
     protected $table = 'company';
+
+    public $timestamp = false;
+
     protected $fillable = [
         'foto_b',
         'nama_c',

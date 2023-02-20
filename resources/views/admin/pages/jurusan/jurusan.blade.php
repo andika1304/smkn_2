@@ -13,7 +13,6 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th scope="col">FOTO JURUSAN</th>
                                     <th scope="col">NAMA JURUSAN</th>
                                     <th scope="col">DESKRIPSI</th>
                                     <th scope="col">AKSI</th>
@@ -22,16 +21,12 @@
                             <tbody>
                                 @forelse ($jurusan as $row)
                                     <tr>
-                                        <td class="text-center">
-                                            <img src="{{ 'http://127.0.0.1:8000'.Storage::url('jurusan/') . $row->foto_k }}" class="rounded"
-                                                style="width: 100px">
-                                        </td>
                                         <td>{{ $row->nama_k }}</td>
                                         <td>{!! $row->desk_k !!}</td>
                                         <td class="text-center">
                                             <form onsubmit="return confirm('Apakah Anda Yakin ?');"
-                                                action="/web-admin/jurusan/destroy/{{ $row->id }}" method="POST">
-                                                <a href="/web-admin/jurusan/edit/{{ $row->id }}"
+                                                action="/web-admin/jurusan/destroy/{{ $row->id_k }}" method="get">
+                                                <a href="/web-admin/jurusan/edit/{{ $row->id_k }}"
                                                     class="btn btn-sm btn-primary">EDIT</a>
                                                 @csrf
                                                 @method('DELETE')

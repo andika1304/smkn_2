@@ -28,7 +28,7 @@ class CompanyController extends Controller
      *
      * @return void
      */
-    public function create()
+    public function edit()
     {
         return view('admin.pages.company.create');
     }
@@ -43,28 +43,31 @@ class CompanyController extends Controller
         // validate form
         $this->validate($request, [
             'foto_b' => 'image|mimes:png,jpg,jpeg,gif,svg|max:2048',
-            'nama_c' => 'required|min:5',
-            'co_' => 'requred|min:10'
+            'nama_c' => 'required|',
+            'co_' => 'required|'
         ]);
 
-        $foto = $request->file('foto_b');
-
-        if ($foto->storeAs('company/', $foto->hashName(), 'public')) {
-            company::create([
-                'foto_b' => $foto->hashName(),
-                'nama_c' => $request->nama_c,
-                'co_' => $request->co_
+        $image = $request->file('foto_b');
+        if ($image->storeAs('company/', $image->hashName(), 'public')) {
+            $storeCompany = company::create([
+                'foto_b'     => $image->hashName(),
+                'nama_c'     => $request->nama_c,
+                'co_'   => $request->co_
             ]);
-        } else {
-            echo "gagal";
+            if ($storeCompany) {
+                //
+                return redirect('/web-admin/jurusan')->with(['success' => 'data berhasil disimpan!']);
+            } else {
+                // kalo gagal masuk ke database
+                return redirect()->back()->withInput()->withErrors('data gagal disimpan!');
+            }
         }
-        return redirect('/web-admin/company')->with(['success' => 'data berhasil disimpan!']);
     }
     public function update(Request $request, company $com)
     {
         $this->validate($request, [
             'foto_b' => 'image|mimes:png,jpg,jpeg|max:2048',
-            'nama_c' => 'required|min:5',
+            'nama_c' => 'required|min:3',
             'co_' => 'required|min:10'
         ]);
         if ($request->hasFile('foto_b')) {
@@ -88,7 +91,7 @@ class CompanyController extends Controller
     {
         Storage::delete(['public/company/' . $com->foto_b]);
         //     Storage::delete('public/company/'.$com->foto_b):
-        $hapus = $com->where('id', '=', $id)->delete();
+        $hapus = $com->where('id_c', '=', $id)->delete();
         if ($hapus) {
             return redirect('/web-admin/company')->with(['success' => 'data berhasil di hapus!']);
         } else {

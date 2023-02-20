@@ -69,13 +69,13 @@ class JurusanController extends Controller
 
     }
 
-    public function edit(Jurusan $jr)
-
+    public function edit($id, jurusan $jurusan)
     {
+        $data = $jurusan->firstWhere('id_k',$id);
+        return view('admin.pages.jurusan.edit', compact('data'));
     }
 
     public function update(Request $request, Jurusan $jurusan)
-
     {
         $this->validate($request, [
             'foto_k' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',

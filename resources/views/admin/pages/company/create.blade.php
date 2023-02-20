@@ -7,12 +7,8 @@
 @section('content')
     <div id="page-wrapper">
         <div class="main-page">
-            <form action="/web-admin/company/store/" method="post" enctype="multipart/form-data">
-
-                <div class="form-group">
-                    <label for="id_c">ID COMPANY</label>
-                    <input type="number" name="id_c" id="id_c" class="form-control">
-                </div>
+            <form action="/web-admin/company/store" method="post" enctype="multipart/form-data">
+                @csrf
                 <div class="form-group">
                     <label for="nama_c">NAMA COMPANY</label>
                     <input type="text" name="nama_c" id="nama_c" class="form-control">

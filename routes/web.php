@@ -35,7 +35,7 @@ Route::group(['middleware' => 'login'], function () {
     Route::get('/web-admin/berita', 'App\Http\Controllers\admin\BeritaController@index');
     Route::get('/web-admin/berita/create', 'App\Http\Controllers\admin\BeritaController@create');
     Route::post('/web-admin/berita/store', 'App\Http\Controllers\admin\BeritaController@store');
-    Route::post('/web-admin/berita/edit', 'App\Http\Controllers\admin\BeritaController@edit');
+    Route::get('/web-admin/berita/edit/{id}', 'App\Http\Controllers\admin\BeritaController@edit');
     Route::delete('/web-admin/berita/destroy/{id}', 'App\Http\Controllers\admin\BeritaController@destroy');
     Route::PUT('/web-admin/berita/update', 'App\Http\Controllers\admin\BeritaController@update');
 
@@ -43,7 +43,7 @@ Route::group(['middleware' => 'login'], function () {
     Route::get('/web-admin/company', 'App\Http\Controllers\admin\CompanyController@index');
     Route::get('/web-admin/company/create', 'App\Http\Controllers\admin\CompanyController@create');
     Route::post('/web-admin/company/store', 'App\Http\Controllers\admin\CompanyController@store');
-    Route::post('/web-admin/company/edit', 'App\Http\Controllers\admin\CompanyController@edit');
+    Route::get('/web-admin/company/edit/{id}', 'App\Http\Controllers\admin\CompanyController@edit');
     Route::delete('/web-admin/company/destroy/{id}', 'App\Http\Controllers\admin\CompanyController@destroy');
     Route::PUT('/web-admin/company/update', 'App\Http\Controllers\admin\CompanyController@update');
 
@@ -51,7 +51,7 @@ Route::group(['middleware' => 'login'], function () {
     Route::get('/web-admin/kontak', 'App\Http\Controllers\admin\KontakController@index');
     Route::get('/web-admin/kontak/create', 'App\Http\Controllers\admin\KontakController@create');
     Route::post('/web-admin/kontak/store', 'App\Http\Controllers\admin\KontakController@store');
-    Route::post('/web-admin/kontak/edit', 'App\Http\Controllers\admin\KontakController@edit');
+    Route::post('/web-admin/kontak/edit/{id}', 'App\Http\Controllers\admin\KontakController@edit');
     Route::delete('/web-admin/kontak/destroy/{id}', 'App\Http\Controllers\admin\KontakController@destroy');
     Route::PUT('/web-admin/kontak/update', 'App\Http\Controllers\admin\KontakController@update');
 
@@ -59,7 +59,7 @@ Route::group(['middleware' => 'login'], function () {
     Route::get('/web-admin/jurusan', 'App\Http\Controllers\admin\JurusanController@index');
     Route::get('/web-admin/jurusan/create', 'App\Http\Controllers\admin\JurusanController@create');
     Route::post('/web-admin/jurusan/store', 'App\Http\Controllers\admin\JurusanController@store');
-    Route::post('/web-admin/jurusan/edit', 'App\Http\Controllers\admin\JurusanController@edit');
+    Route::get('/web-admin/jurusan/edit/{id}', 'App\Http\Controllers\admin\JurusanController@edit');
     Route::delete('/web-admin/jurusan/destroy/{id}', 'App\Http\Controllers\admin\JurusanController@destroy');
     Route::PUT('/web-admin/jurusan/update', 'App\Http\Controllers\admin\JurusanController@update');
 
