@@ -41,6 +41,7 @@
 					</div>
 					<!-- //banner slider-->
 				</div>
+<<<<<<< HEAD
 				<div class="col-lg-5 col-md-8 px-lg-3 px-0">
 					<div class="banner-form-w3 ml-lg-5">
 						<div class="padding">
@@ -69,6 +70,9 @@
 						</div>
 					</div>
 				</div>
+=======
+                {{-- formulir udah di pindahin ke section baru --}}
+>>>>>>> 06ec8dc05bea70277dd819d3321b5f7ea212ace0
 			</div>
 		</div>
 	</div>

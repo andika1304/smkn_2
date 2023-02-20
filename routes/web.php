@@ -32,6 +32,16 @@ Route::post('/aksi_login', [AuthController::class, 'aksi_login']);
 Route::group(['middleware' => 'login'], function () {
     Route::get('/dasboard', [Authcontroller::class, 'home']);
 
+
+    // alumni
+    Route::get('/web-admin/alumni', 'App\Http\Controllers\admin\AlumniController@index');
+    Route::get('/web-admin/alumni/create', 'App\Http\Controllers\admin\AlumniController@create');
+    Route::post('/web-admin/alumni/store', 'App\Http\Controllers\admin\AlumniController@store');
+    Route::get('/web-admin/alumni/edit/{id_alumni}', 'App\Http\Controllers\admin\AlumniController@edit');
+    Route::delete('/web-admin/alumni/destroy/{id_alumni}', 'App\Http\Controllers\admin\AlumniController@destroy');
+    Route::PUT('/web-admin/alumni/update/{id_alumni}', 'App\Http\Controllers\admin\AlumniController@update');
+
+    // berita
     Route::get('/web-admin/berita', 'App\Http\Controllers\admin\BeritaController@index');
     Route::get('/web-admin/berita/create', 'App\Http\Controllers\admin\BeritaController@create');
     Route::post('/web-admin/berita/store', 'App\Http\Controllers\admin\BeritaController@store');

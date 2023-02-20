@@ -69,10 +69,16 @@ class JurusanController extends Controller
 
     }
 
+<<<<<<< HEAD
     public function edit($id, jurusan $jurusan)
     {
         $data = $jurusan->firstWhere('id_k',$id);
         return view('admin.pages.jurusan.edit', compact('data'));
+=======
+    public function edit(Jurusan $jr)
+    {
+
+>>>>>>> 06ec8dc05bea70277dd819d3321b5f7ea212ace0
     }
 
     public function update(Request $request, Jurusan $jurusan)

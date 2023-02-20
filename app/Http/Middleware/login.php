@@ -20,6 +20,6 @@ class login
         if(Auth::check()){
             return $next($request);
         }
-        return redirect('/')->withErrors('anda harus login');
+        return redirect('/web-admin/login/login')->withErrors('anda harus login');
     }
 }

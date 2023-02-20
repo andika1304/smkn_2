@@ -1,13 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>PROJECT ASAL ASALAN</title>
     <!-- for-mobile-apps -->
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Child Learn Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone C ompatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <meta name="keywords"
+        content="Child Learn Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone C ompatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 
     <script>
         addEventListener("load", function() {
@@ -27,20 +27,31 @@
     <!-- //css files -->
 
     <!-- google fonts -->
-    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+    <link
+        href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext"
+        rel="stylesheet">
     <!-- //google fonts -->
 
 </head>
 
 <body>
+    {{-- navbar --}}
+    @include('frontend.home.navbar')
+
+
 
     <!-- home -->
-    @include('frontend.home.home')
+    {{-- nggak pake home, udah diganti pake navbar --}}
+    {{-- @include('frontend.home.home') --}}
     <!-- //home -->
 
     <!-- kontak -->
     @include('frontend.home.kontak')
     <!-- //kontak -->
+
+    {{-- jurusan --}}
+    @include('frontend.home.jurusan')
+    {{-- //jurusan --}}
 
     <!-- company -->
     @include('frontend.home.company')
@@ -50,9 +61,16 @@
     @include('frontend.home.berita')
     <!-- //berita -->
 
-    {{-- jurusan --}}
-    @include('frontend.home.jurusan')
-    {{-- //jurusan --}}
+    {{-- alumni --}}
+    @include('frontend.home.alumni')
+    {{-- //alumni --}}
+
+
+    {{-- formdaftar --}}
+    @include('frontend.home.formdaftar')
+    {{-- //formdaftar --}}
+
+
 
     <!-- footer -->
     <footer>
@@ -99,4 +117,5 @@
     <!-- move top -->
 
 </body>
+
 </html>

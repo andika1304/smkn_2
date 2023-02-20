@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Admin\Alumni;
 use App\Models\Admin\Berita;
 use App\Models\Admin\jurusan;
 use App\Models\Admin\company;
@@ -18,7 +19,7 @@ class HomeController extends Controller
             "jurusan" =>jurusan::all(),
             "company" =>company::all(),
             "kontak" =>Kontak::all(),
-
+            "alumni" => Alumni::all()
         ];
         return view('frontend.main', compact('data'));
     }
